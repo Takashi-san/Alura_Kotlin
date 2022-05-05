@@ -16,4 +16,8 @@ fun main() {
     accountMarcos.logInfo()
 }
 
+fun logField(label: String, value: Any) {
+    println("$label: $value")
+}
+
 

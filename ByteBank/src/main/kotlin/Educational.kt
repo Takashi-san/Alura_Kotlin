@@ -1,4 +1,29 @@
 object Educational {
+    fun testPassByValueReference() {
+        // Pass by value
+        // Primitive types are passed by value.
+        val valueA = 10
+        var valueB = valueA
+        valueB++
+        logField("valueA", valueA)
+        logField("valueB", valueB)
+        println()
+
+        // Pass by reference
+        // Objects are passed by reference
+        val refA = Account()
+        refA.owner = "John"
+        val refB = refA
+        refB.owner = "Maria"
+        logField("refA", refA.owner)
+        logField("refB", refB.owner)
+        logField("refA hash", refA)
+        logField("refB hash", refB)
+        println()
+
+        // If you want to pass an object by value, you have to implement in your class a copy method to do so.
+    }
+
     fun testControlFlow() {
 //    var i = 0 // Use when using while
 //    while (i < 5) {
@@ -31,29 +56,27 @@ object Educational {
         // Kotlin has labels! It works for control flows and return from functions!
         label@ for (i in 0 until 10) {
             println("i $i")
-            for (j in  0 until 10) {
+            for (j in 0 until 10) {
                 println("j $j")
                 if (j == 3) break@label
             }
         }
     }
 
-    fun testConditinals(balance: Double) {
+    fun testConditinals(number: Double) {
+        // This when expression is equivalent to the if expression below.
         when {
-            balance > 0.0 -> println("positive account")
-            balance < 0.0 -> println("negative account")
-            else -> println("neutral account")
+            number > 0.0 -> println("positive number")
+            number < 0.0 -> println("negative number")
+            else -> println("neutral number")
         }
 
-        // equivalent to the if below.
-//    if (balance > 0.0) {
-//        println("positive account")
-//    }
-//    else if (balance < 0.0) {
-//        println("negative account")
-//    }
-//    else {
-//        println("neutral account")
-//    }
+        if (number > 0.0) {
+            println("positive number")
+        } else if (number < 0.0) {
+            println("negative number")
+        } else {
+            println("neutral number")
+        }
     }
 }
