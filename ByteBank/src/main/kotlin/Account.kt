@@ -9,4 +9,14 @@ class Account {
         logField("balance", balance)
         println()
     }
+
+    fun isValidDepositValue(value: Double): Boolean {
+        return value >= 0
+    }
+
+    fun deposit(value: Double) {
+        if (isValidDepositValue(value)) {
+            balance += value
+        }
+    }
 }

@@ -14,6 +14,10 @@ fun main() {
 
     accountBruno.logInfo()
     accountMarcos.logInfo()
+
+    accountBruno.deposit(50.0)
+    accountBruno.deposit(-50.0)
+    accountBruno.logInfo()
 }
 
 fun logField(label: String, value: Any) {
