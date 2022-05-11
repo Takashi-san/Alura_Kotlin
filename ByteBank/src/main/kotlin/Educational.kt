@@ -11,12 +11,11 @@ object Educational {
 
         // Pass by reference
         // Objects are passed by reference
-        val refA = Account()
-        refA.owner = "John"
+        val refA = Account("John", 123, 100.0)
         val refB = refA
-        refB.owner = "Maria"
-        logField("refA", refA.owner)
-        logField("refB", refB.owner)
+        refB.setBalance(200.0)
+        logField("refA balance", refA.getBalance())
+        logField("refB balance", refB.getBalance())
         logField("refA hash", refA)
         logField("refB hash", refB)
         println()

@@ -1,7 +1,22 @@
 class Account {
-    var owner = ""
-    var id = 0
-    var balance = 0.0
+    private var owner = ""
+    private var id = 0
+    private var balance = 0.0
+
+    constructor(owner: String, id: Int, balance: Double) {
+        this.owner = owner
+        this.id = id
+        this.balance = balance
+    }
+
+    fun getOwner(): String = owner
+    fun getID(): Int = id
+    fun getBalance(): Double = balance
+    fun setBalance(value: Double) {
+        if (isValidMoneyInput(value)) {
+            balance = value
+        }
+    }
 
     fun logInfo() {
         logField("owner", owner)
@@ -10,13 +25,26 @@ class Account {
         println()
     }
 
-    fun isValidDepositValue(value: Double): Boolean {
-        return value >= 0
+    private fun isValidMoneyInput(value: Double): Boolean = value > 0.0
+
+    fun deposit(value: Double): Boolean {
+        if (!isValidMoneyInput(value)) return false
+        balance += value
+        return true
     }
 
-    fun deposit(value: Double) {
-        if (isValidDepositValue(value)) {
-            balance += value
+    fun withdraw(value: Double): Boolean {
+        if (!isValidMoneyInput(value)) return false
+        if (value <= balance) {
+            balance -= value
+            return true
         }
+        return false
+    }
+
+    fun transfer(value: Double, to: Account): Boolean {
+        if (!isValidMoneyInput(value)) return false
+        if (!withdraw(value)) return false
+        return to.deposit(value)
     }
 }
