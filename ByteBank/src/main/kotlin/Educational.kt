@@ -13,9 +13,9 @@ object Educational {
         // Objects are passed by reference
         val refA = Account("John", 123, 100.0)
         val refB = refA
-        refB.setBalance(200.0)
-        logField("refA balance", refA.getBalance())
-        logField("refB balance", refB.getBalance())
+        refB.deposit(200.0)
+        logField("refA balance", refA.balance)
+        logField("refB balance", refB.balance)
         logField("refA hash", refA)
         logField("refB hash", refB)
         println()

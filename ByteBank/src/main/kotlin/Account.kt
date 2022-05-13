@@ -1,21 +1,13 @@
 class Account {
-    private var owner = ""
-    private var id = 0
-    private var balance = 0.0
+    val owner: String
+    val id: Int
+    var balance = 0.0
+        private set
 
     constructor(owner: String, id: Int, balance: Double) {
         this.owner = owner
         this.id = id
         this.balance = balance
-    }
-
-    fun getOwner(): String = owner
-    fun getID(): Int = id
-    fun getBalance(): Double = balance
-    fun setBalance(value: Double) {
-        if (isValidMoneyInput(value)) {
-            balance = value
-        }
     }
 
     fun logInfo() {
