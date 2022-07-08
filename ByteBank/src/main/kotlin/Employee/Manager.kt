@@ -1,16 +1,26 @@
 package Employee
 
-class Manager(
+open class Manager(
     name: String,
     cpf: String,
     wage: Double,
     private val password: Int
 ) : Employee(name, cpf, wage) {
-    override fun gratification(): Double {
-        return wage * 0.20
-    }
+    override val gratification: Double
+        get() {
+            return super.gratification + wage
+        }
 
     fun authenticate(input: Int): Boolean {
-        return input == password
+        val result: Boolean = input == this.password
+
+        if (result) {
+            println("${this.name} succeeded to authenticate")
+        }
+        else {
+            println("${this.name} failed to authenticate")
+        }
+
+        return result
     }
 }

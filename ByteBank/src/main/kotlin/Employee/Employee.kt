@@ -11,11 +11,11 @@ open class Employee(
         logField("name", name)
         logField("cpf", cpf)
         logField("wage", wage)
-        logField("gratification", gratification())
-        println()
+        logField("gratification", gratification)
     }
 
-    override fun gratification(): Double {
-        return wage * 0.10
-    }
+    override val gratification: Double
+        get() {
+            return wage * 0.10
+        }
 }

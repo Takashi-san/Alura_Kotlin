@@ -1,6 +1,6 @@
 package Employee
 
 interface IEmployee {
-    fun gratification() : Double
+    val gratification: Double
     fun logInfo()
 }

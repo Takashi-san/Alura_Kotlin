@@ -1,3 +1,4 @@
+import Employee.Director
 import Employee.Employee
 import Employee.Manager
 
@@ -11,20 +12,28 @@ fun main() {
         1000.0
     )
     bruno.logInfo()
+    println()
 
     val maria = Manager(
         "Maria",
         "222.222.222-22",
-        4000.0,
+        1000.0,
         1234
     )
     maria.logInfo()
-    if (maria.authenticate(1234)) {
-        println("${maria.name} succeded to authenticate")
-    }
-    else {
-        println("${maria.name} failed to authenticate")
-    }
+    maria.authenticate(1234)
+    println()
+
+    val guilherme = Director(
+        "Guilherme",
+        "333.333.333-33",
+        1000.0,
+        5678,
+        300.0
+    )
+    guilherme.logInfo()
+    guilherme.authenticate(1234)
+    println()
 }
 
 
