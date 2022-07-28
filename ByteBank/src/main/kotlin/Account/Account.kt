@@ -1,12 +1,15 @@
-class Account {
-    val owner: String
+package Account
+
+import logField
+
+open class Account(
+    val owner: String,
     val id: Int
+) {
     var balance = 0.0
         private set
 
-    constructor(owner: String, id: Int, balance: Double) {
-        this.owner = owner
-        this.id = id
+    constructor(owner: String, id: Int, balance: Double) : this(owner, id) {
         this.balance = balance
     }
 
@@ -25,7 +28,7 @@ class Account {
         return true
     }
 
-    fun withdraw(value: Double): Boolean {
+    open fun withdraw(value: Double): Boolean {
         if (!isValidMoneyInput(value)) return false
         if (value <= balance) {
             balance -= value

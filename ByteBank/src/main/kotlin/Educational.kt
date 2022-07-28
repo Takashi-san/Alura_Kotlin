@@ -1,3 +1,5 @@
+import Account.Account
+
 object EducationalTests {
     fun testPassByValueReference() {
         // Pass by value
