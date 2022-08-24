@@ -1,13 +1,13 @@
 package Tests
 
 import Calculator.GratificationCalculator
+import Employee.Analyst
 import Employee.Director
-import Employee.Employee
 import Employee.Manager
 import logField
 
 fun testEmployeePolimorphism() {
-    val bruno = Employee(
+    val bruno = Analyst(
         "Bruno",
         "101.010.001-10",
         1000.0

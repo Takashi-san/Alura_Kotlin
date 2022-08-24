@@ -8,7 +8,7 @@ open class Manager(
 ) : Employee(name, cpf, wage) {
     override val gratification: Double
         get() {
-            return super.gratification + wage
+            return wage * 2.0
         }
 
     fun authenticate(input: Int): Boolean {
