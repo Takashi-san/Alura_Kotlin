@@ -6,7 +6,7 @@ class Director(
     name: String,
     cpf: String,
     wage: Double,
-    password: Int,
+    password: String,
     private val plr: Double
 ) : Manager(name, cpf, wage, password) {
     override val gratification: Double get() = super.gratification + plr

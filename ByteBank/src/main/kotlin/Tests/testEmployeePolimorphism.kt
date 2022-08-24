@@ -19,21 +19,21 @@ fun testEmployeePolimorphism() {
         "Maria",
         "222.222.222-22",
         1000.0,
-        1234
+        "1234"
     )
     maria.logInfo()
-    maria.authenticate(1234)
+    maria.authenticate("1234")
     println()
 
     val guilherme = Director(
         "Guilherme",
         "333.333.333-33",
         1000.0,
-        5678,
+        "5678",
         300.0
     )
     guilherme.logInfo()
-    guilherme.authenticate(1234)
+    guilherme.authenticate("1234")
     println()
 
     val calculator = GratificationCalculator()
