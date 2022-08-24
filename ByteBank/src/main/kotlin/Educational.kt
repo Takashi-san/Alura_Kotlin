@@ -1,4 +1,5 @@
 import Account.Account
+import Account.CheckingAccount
 
 object EducationalTests {
     fun testPassByValueReference() {
@@ -13,7 +14,7 @@ object EducationalTests {
 
         // Pass by reference
         // Objects are passed by reference
-        val refA = Account("John", 123, 100.0)
+        val refA = CheckingAccount("John", 123, 100.0)
         val refB = refA
         refB.deposit(200.0)
         logField("refA balance", refA.balance)
@@ -82,9 +83,9 @@ object EducationalTests {
     }
 
     fun testFunctionLabelCall() {
-        val accountBruno = Account("Bruno", 123, 200.0)
-        val accountAlex = Account("Alex", 456, 100.0)
-        val accountMaria = Account(balance = 50.0, id = 789, owner = "Maria")
+        val accountBruno = CheckingAccount("Bruno", 123, 200.0)
+        val accountAlex = CheckingAccount("Alex", 456, 100.0)
+        val accountMaria = CheckingAccount(balance = 50.0, id = 789, owner = "Maria")
 
         println("Deposit")
         accountBruno.deposit(50.0)
