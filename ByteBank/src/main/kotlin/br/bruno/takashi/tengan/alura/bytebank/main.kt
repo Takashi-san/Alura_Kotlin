@@ -1,12 +1,7 @@
-import Account.CheckingAccount
-import Account.SavingsAccount
-import Calculator.GratificationCalculator
-import Employee.Director
-import Employee.Employee
-import Employee.Manager
-import InternalSystem.InternalSystem
-import Tests.testAccountPolimorphism
-import Tests.testEmployeePolimorphism
+package br.bruno.takashi.tengan.alura.bytebank
+
+import br.bruno.takashi.tengan.alura.bytebank.Employee.Director
+import br.bruno.takashi.tengan.alura.bytebank.InternalSystem.InternalSystem
 
 fun main() {
     println("Welcome to the ByteBank!")

@@ -1,6 +1,6 @@
-package Employee
+package br.bruno.takashi.tengan.alura.bytebank.Employee
 
-import logField
+import br.bruno.takashi.tengan.alura.bytebank.logField
 
 abstract class Employee(
     val name: String,

@@ -1,6 +1,6 @@
-package Account
+package br.bruno.takashi.tengan.alura.bytebank.Account
 
-import logField
+import br.bruno.takashi.tengan.alura.bytebank.logField
 
 abstract class Account(
     val owner: String,

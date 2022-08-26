@@ -1,4 +1,4 @@
-package Employee
+package br.bruno.takashi.tengan.alura.bytebank.Employee
 
 class Analyst(name: String, cpf: String, wage: Double) : Employee(name, cpf, wage) {
     override val gratification: Double

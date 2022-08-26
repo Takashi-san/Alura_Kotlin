@@ -1,10 +1,10 @@
-package Tests
+package br.bruno.takashi.tengan.alura.bytebank.Test
 
-import Calculator.GratificationCalculator
-import Employee.Analyst
-import Employee.Director
-import Employee.Manager
-import logField
+import br.bruno.takashi.tengan.alura.bytebank.Calculator.GratificationCalculator
+import br.bruno.takashi.tengan.alura.bytebank.Employee.Analyst
+import br.bruno.takashi.tengan.alura.bytebank.Employee.Director
+import br.bruno.takashi.tengan.alura.bytebank.Employee.Manager
+import br.bruno.takashi.tengan.alura.bytebank.logField
 
 fun testEmployeePolimorphism() {
     val bruno = Analyst(

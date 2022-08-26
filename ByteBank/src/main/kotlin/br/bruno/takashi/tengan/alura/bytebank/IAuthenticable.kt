@@ -1,3 +1,5 @@
+package br.bruno.takashi.tengan.alura.bytebank
+
 interface IAuthenticable {
     val password: String
 

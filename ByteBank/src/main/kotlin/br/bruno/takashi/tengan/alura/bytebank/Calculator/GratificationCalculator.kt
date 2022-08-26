@@ -1,6 +1,6 @@
-package Calculator
+package br.bruno.takashi.tengan.alura.bytebank.Calculator
 
-import Employee.Employee
+import br.bruno.takashi.tengan.alura.bytebank.Employee.Employee
 
 class GratificationCalculator {
     var total: Double = 0.0

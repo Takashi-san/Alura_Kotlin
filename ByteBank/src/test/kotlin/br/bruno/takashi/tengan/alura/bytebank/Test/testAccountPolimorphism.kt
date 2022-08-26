@@ -1,7 +1,7 @@
-package Tests
+package br.bruno.takashi.tengan.alura.bytebank.Test
 
-import Account.CheckingAccount
-import Account.SavingsAccount
+import br.bruno.takashi.tengan.alura.bytebank.Account.CheckingAccount
+import br.bruno.takashi.tengan.alura.bytebank.Account.SavingsAccount
 
 fun testAccountPolimorphism() {
     val checkingAccount = CheckingAccount("Carlos", 101)
