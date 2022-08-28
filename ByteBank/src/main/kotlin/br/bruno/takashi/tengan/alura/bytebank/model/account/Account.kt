@@ -1,23 +1,24 @@
 package br.bruno.takashi.tengan.alura.bytebank.model.account
 
 import br.bruno.takashi.tengan.alura.bytebank.logField
+import br.bruno.takashi.tengan.alura.bytebank.model.client.Client
+import br.bruno.takashi.tengan.alura.bytebank.model.util.ILoggable
 
 abstract class Account(
-    val owner: String,
+    val owner: Client,
     val id: Int
-) {
+) : ILoggable {
     var balance = 0.0
         protected set
 
-    constructor(owner: String, id: Int, balance: Double) : this(owner, id) {
+    constructor(owner: Client, id: Int, balance: Double) : this(owner, id) {
         this.balance = balance
     }
 
-    fun logInfo() {
-        logField("owner", owner)
-        logField("id", id)
-        logField("balance", balance)
-        println()
+    override fun logBody() {
+        owner.log()
+        logField(::id.name, id)
+        logField(::balance.name, balance)
     }
 
     protected fun isValidMoneyInput(value: Double): Boolean = value > 0.0

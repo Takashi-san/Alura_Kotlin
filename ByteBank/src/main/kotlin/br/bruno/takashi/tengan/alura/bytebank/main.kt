@@ -1,8 +1,9 @@
 package br.bruno.takashi.tengan.alura.bytebank
 
+import br.bruno.takashi.tengan.alura.bytebank.model.account.SavingsAccount
+import br.bruno.takashi.tengan.alura.bytebank.model.client.Client
 import br.bruno.takashi.tengan.alura.bytebank.model.employee.Director
 import br.bruno.takashi.tengan.alura.bytebank.model.internal_system.InternalSystem
-import br.bruno.takashi.tengan.alura.bytebank.model.client.Client
 
 fun main() {
     println("Welcome to the ByteBank!")
@@ -25,6 +26,13 @@ fun main() {
 
     system.login(client, "abacaxi")
     system.login(director, "uva")
+
+    println()
+    client.log()
+    println()
+
+    val account = SavingsAccount(client, 123, 500.00)
+    account.log()
 }
 
 
