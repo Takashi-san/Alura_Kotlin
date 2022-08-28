@@ -1,8 +1,5 @@
 package br.bruno.takashi.tengan.alura.bytebank.model.address
 
-import br.bruno.takashi.tengan.alura.bytebank.logField
-import br.bruno.takashi.tengan.alura.bytebank.model.util.ILoggable
-
 class Address(
     var residence: String = "",
     var number: String = "",
@@ -11,15 +8,19 @@ class Address(
     var state: String = "",
     var zip: String = "",
     var complement: String = ""
-): ILoggable {
-    override fun logBody() {
-        logField(::residence.name, residence)
-        logField(::number.name, number)
-        logField(::district.name, district)
-        logField(::city.name, city)
-        logField(::state.name, state)
-        logField(::zip.name, zip)
-        logField(::complement.name, complement)
+) {
+    override fun toString(): String {
+        return """
+            Address(
+                residence='$residence', 
+                number='$number', 
+                district='$district', 
+                city='$city', 
+                state='$state', 
+                zip='$zip', 
+                complement='$complement'
+            )
+            """.trimIndent()
     }
 }
 

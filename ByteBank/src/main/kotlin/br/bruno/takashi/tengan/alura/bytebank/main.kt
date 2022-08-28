@@ -1,7 +1,5 @@
 package br.bruno.takashi.tengan.alura.bytebank
 
-import br.bruno.takashi.tengan.alura.bytebank.model.account.Account
-import br.bruno.takashi.tengan.alura.bytebank.model.account.CheckingAccount
 import br.bruno.takashi.tengan.alura.bytebank.model.authentication.IAuthenticable
 import br.bruno.takashi.tengan.alura.bytebank.model.client.Client
 import br.bruno.takashi.tengan.alura.bytebank.model.internal_system.InternalSystem
@@ -19,12 +17,9 @@ fun main() {
         "000.000.000-00",
         "banana"
     )
+    println(client)
 
-    val account1 = CheckingAccount(client, 1)
-    val account2 = CheckingAccount(client, 2)
-    val account3 = CheckingAccount(client, 3)
-
-    logField("account instances", Account.instanceCount)
+    println(client)
 }
 
 
