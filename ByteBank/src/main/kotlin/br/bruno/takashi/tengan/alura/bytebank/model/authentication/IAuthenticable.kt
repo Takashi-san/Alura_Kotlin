@@ -1,4 +1,4 @@
-package br.bruno.takashi.tengan.alura.bytebank
+package br.bruno.takashi.tengan.alura.bytebank.model.authentication
 
 interface IAuthenticable {
     val password: String

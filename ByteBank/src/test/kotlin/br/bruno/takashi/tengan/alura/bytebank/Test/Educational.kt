@@ -1,6 +1,6 @@
 package br.bruno.takashi.tengan.alura.bytebank
 
-import br.bruno.takashi.tengan.alura.bytebank.Account.CheckingAccount
+import br.bruno.takashi.tengan.alura.bytebank.model.account.CheckingAccount
 
 object EducationalTests {
     fun testPassByValueReference() {

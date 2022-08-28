@@ -1,6 +1,6 @@
-package br.bruno.takashi.tengan.alura.bytebank.Employee
+package br.bruno.takashi.tengan.alura.bytebank.model.employee
 
-import br.bruno.takashi.tengan.alura.bytebank.IAuthenticable
+import br.bruno.takashi.tengan.alura.bytebank.model.authentication.IAuthenticable
 
 open class Manager(
     name: String,

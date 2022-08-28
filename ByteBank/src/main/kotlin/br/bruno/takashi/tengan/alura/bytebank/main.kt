@@ -1,7 +1,8 @@
 package br.bruno.takashi.tengan.alura.bytebank
 
-import br.bruno.takashi.tengan.alura.bytebank.Employee.Director
-import br.bruno.takashi.tengan.alura.bytebank.InternalSystem.InternalSystem
+import br.bruno.takashi.tengan.alura.bytebank.model.employee.Director
+import br.bruno.takashi.tengan.alura.bytebank.model.internal_system.InternalSystem
+import br.bruno.takashi.tengan.alura.bytebank.model.client.Client
 
 fun main() {
     println("Welcome to the ByteBank!")

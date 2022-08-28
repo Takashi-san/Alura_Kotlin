@@ -1,6 +1,6 @@
-package br.bruno.takashi.tengan.alura.bytebank.InternalSystem
+package br.bruno.takashi.tengan.alura.bytebank.model.internal_system
 
-import br.bruno.takashi.tengan.alura.bytebank.IAuthenticable
+import br.bruno.takashi.tengan.alura.bytebank.model.authentication.IAuthenticable
 
 class InternalSystem {
     fun login(authenticable: IAuthenticable, password: String) {

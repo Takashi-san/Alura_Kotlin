@@ -1,4 +1,4 @@
-package br.bruno.takashi.tengan.alura.bytebank.Account
+package br.bruno.takashi.tengan.alura.bytebank.model.account
 
 class SavingsAccount : Account {
     constructor(owner: String, id: Int) : super(owner, id)
