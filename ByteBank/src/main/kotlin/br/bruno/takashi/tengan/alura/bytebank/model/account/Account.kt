@@ -4,10 +4,6 @@ import br.bruno.takashi.tengan.alura.bytebank.logField
 import br.bruno.takashi.tengan.alura.bytebank.model.client.Client
 import br.bruno.takashi.tengan.alura.bytebank.model.util.ILoggable
 
-// Global variable only for test, never use this!
-var accountCount = 0
-    private set
-
 abstract class Account(
     val owner: Client,
     val id: Int
@@ -15,8 +11,13 @@ abstract class Account(
     var balance = 0.0
         protected set
 
+    companion object {
+        var instanceCount = 0
+            private set
+    }
+
     init {
-        accountCount++
+        instanceCount++
     }
 
     constructor(owner: Client, id: Int, balance: Double) : this(owner, id) {
