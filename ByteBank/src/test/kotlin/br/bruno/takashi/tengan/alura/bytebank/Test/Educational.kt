@@ -1,6 +1,7 @@
 package br.bruno.takashi.tengan.alura.bytebank
 
 import br.bruno.takashi.tengan.alura.bytebank.model.account.CheckingAccount
+import br.bruno.takashi.tengan.alura.bytebank.model.client.Client
 
 object EducationalTests {
     fun testPassByValueReference() {
@@ -15,7 +16,8 @@ object EducationalTests {
 
         // Pass by reference
         // Objects are passed by reference
-        val refA = CheckingAccount("John", 123, 100.0)
+        val john = Client("John", "", "")
+        val refA = CheckingAccount(john, 123, 100.0)
         val refB = refA
         refB.deposit(200.0)
         logField("refA balance", refA.balance)
@@ -84,20 +86,23 @@ object EducationalTests {
     }
 
     fun testFunctionLabelCall() {
-        val accountBruno = CheckingAccount("Bruno", 123, 200.0)
-        val accountAlex = CheckingAccount("Alex", 456, 100.0)
-        val accountMaria = CheckingAccount(balance = 50.0, id = 789, owner = "Maria")
+        val bruno = Client("Bruno", "1", "")
+        val alex = Client("Alex", "2", "")
+        val maria = Client("Maria", "3", "")
+        val accountBruno = CheckingAccount(bruno, 123, 200.0)
+        val accountAlex = CheckingAccount(alex, 456, 100.0)
+        val accountMaria = CheckingAccount(balance = 50.0, id = 789, owner = maria)
 
         println("Deposit")
         accountBruno.deposit(50.0)
         accountBruno.deposit(-50.0)
-        accountBruno.logInfo()
+        accountBruno.log()
 
         println("Withdraw")
         accountBruno.withdraw(100.0)
         accountBruno.withdraw(-100.0)
         accountBruno.withdraw(-1000.0)
-        accountBruno.logInfo()
+        accountBruno.log()
 
         println("Transfer")
         accountBruno.transfer(200.0, accountAlex)
@@ -105,8 +110,8 @@ object EducationalTests {
         accountAlex.transfer(to = accountMaria, value = 100.0)
         accountMaria.transfer(value = 200.0, accountAlex)
 //    accountMaria.transfer(to = accountBruno, 1.0) // This causes error, unordered label usage require that you label all arguments.
-        accountBruno.logInfo()
-        accountAlex.logInfo()
-        accountMaria.logInfo()
+        accountBruno.log()
+        accountAlex.log()
+        accountMaria.log()
     }
 }
